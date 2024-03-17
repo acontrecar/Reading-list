@@ -1,0 +1,39 @@
+aside {
+  padding: 2%;
+  padding-left: 5%;
+
+  .category-list {
+    list-style: none;
+    padding-left: 5%;
+    .category-list-item {
+      padding: 3% 0 3%;
+      border-bottom: 1px solid rgb(193, 207, 189);
+      cursor: pointer;
+    }
+  }
+}
+
+// #container {
+//   .item {
+//     .heading {
+//       background-color: aquamarine;
+//       color: black;
+//       cursor: pointer;
+//     }
+
+//     .content {
+//       border: 1px solid;
+//       height: 0;
+//       overflow: hidden;
+//       transition: all 0.3s ease-in-out;
+//       padding: 0px 20px;
+//     }
+
+//     &.active {
+//       .content {
+//         padding: 20px;
+//         max-height: inherit;
+//       }
+//     }
+//   }
+// }

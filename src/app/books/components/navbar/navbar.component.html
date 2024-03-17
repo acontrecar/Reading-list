@@ -1,0 +1,18 @@
+<header class="header">
+  <article class="container">
+    <select class="select" name="years" id="">
+      <option value="">Years</option>
+    </select>
+    <input type="text" class="input" placeholder="Buscar por título" />
+    <button class="button">Buscar</button>
+  </article>
+  <input
+    type="range"
+    [(ngModel)]="selectedValue"
+    [max]="max"
+    [min]="min"
+    name=""
+    id=""
+  />
+  <span>{{ selectedValue }}</span>
+</header>

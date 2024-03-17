@@ -1,0 +1,33 @@
+<aside>
+  <article>
+    <h2>Genres</h2>
+    <ul class="category-list">
+      @for (genre of $genres(); track genre) {
+      <li class="category-list-item">{{ genre }}</li>
+      }
+    </ul>
+  </article>
+  <article>
+    <h2>Authors</h2>
+    <ul class="category-list">
+      @for (author of $authors(); track author) {
+      <li class="category-list-item">{{ author }}</li>
+      }
+    </ul>
+  </article>
+  <!-- 
+  <div id="container">
+    <div class="item">
+      <div class="heading">Item 1</div>
+      <div class="content">Content</div>
+    </div>
+    <div class="item">
+      <div class="heading">Item 1</div>
+      <div class="content">Content</div>
+    </div>
+    <div class="item">
+      <div class="heading">Item 1</div>
+      <div class="content">Content</div>
+    </div>
+  </div> -->
+</aside>
