@@ -21,6 +21,8 @@ export class NavbarComponent {
   public min: number = 0;
   public selectedValue: number = 0;
   public numbers: number[] = [];
+  public years: number[] = [];
+  public $years: WritableSignal<number[]> = signal([]);
 
   constructor() {}
   ngOnInit(): void {
@@ -28,16 +30,16 @@ export class NavbarComponent {
       .getProduct()
       .pipe(takeUntil(this.destroy$))
       .subscribe((data) => {
-        // this.$books.set(data);
         data.library.map((book) => {
           this.numbers.push(Number(book.book.pages));
+          this.years.push(book.book.year);
         });
+
+        this.$years.set(this.years.sort());
 
         this.max = Math.max(...this.numbers);
         this.min = Math.min(...this.numbers);
         this.selectedValue = this.min;
       });
   }
-
-  // setYears(years)
 }

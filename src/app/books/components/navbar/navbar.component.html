@@ -1,7 +1,10 @@
 <header class="header">
   <article class="container">
     <select class="select" name="years" id="">
-      <option value="">Years</option>
+      <option value="">Anios</option>
+      @for (year of $years(); track $index) {
+      <option [value]="year">{{ year }}</option>
+      }
     </select>
     <input type="text" class="input" placeholder="Buscar por título" />
     <button class="button">Buscar</button>
